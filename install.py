@@ -6,8 +6,16 @@ log.setup_logging()
 
 logger = logging.getLogger(__name__)
 
+def main():
+    logger.info("Checking your OS version....")
+    if util.check_os():
+        logger.info("OK")
+    else:
+        logger.critical("You must use Ubuntu 14.10")
+
+    if util.not_sudo():
   if util.not_sudo():
-        logger.critical("Restart script as root")
+      logger.critical("Restart script as root")
 
     logger.info("Installing packages...")
     if util.install_packages():
