@@ -7,7 +7,7 @@ log.setup_logging()
 logger = logging.getLogger(__name__)
 
 def main():
-    logger.info("Checking your OS version...")
+    logger.info("Checking your OS version....")
     if util.check_os():
         logger.info("OK")
     else:
